@@ -1,0 +1,35 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../assets/img/appointments.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.container h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #1f5674;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+}
+
+.cardsWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}

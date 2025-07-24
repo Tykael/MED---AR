@@ -1,0 +1,31 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #f8f9fa, #e9ecef);
+  background-image: url("../../assets/img/accesoRestringido.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #962c2c;
+}
+
+.container h2 {
+  font-size: 5rem;
+  font-weight: 800;
+  color: #e62b2b;
+  margin: 0;
+}

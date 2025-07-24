@@ -1,0 +1,93 @@
+/* reset.css - Base moderna para React + Vite */
+
+/* Box sizing universal */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remover márgenes por defecto */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Quitar estilo de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Quitar subrayado y colores por defecto en enlaces */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Eliminar estilos de botones, inputs, selects y textareas */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  appearance: none;
+}
+
+/* Estilo básico para botones */
+button {
+  cursor: pointer;
+}
+
+/* Altura completa */
+html,
+body {
+  height: 100%;
+}
+
+/* Mejora del texto */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Imágenes y medios sin desbordes */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Root aislado para layouts con z-index */
+#root {
+  isolation: isolate;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
