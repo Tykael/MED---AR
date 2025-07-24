@@ -4,40 +4,53 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 12px 20px;
   margin: 10px;
-  gap: 10px;
+  gap: 12px;
+  color: #fff5d9;
+  font-size: 0.9rem;
+  overflow-x: auto;
 }
 
 .container span {
-  font-size: 1.5rem;
-  font-weight: 600;
-  flex: 1; /* distribuye equitativamente */
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+/* Distribución personalizada */
 .date {
-  flex: 1.5; /* un poco más de espacio para la fecha */
+  flex: 1.2;
 }
 
-.active span {
-  color: green;
+.time {
+  flex: 1;
+}
+
+.description {
+  flex: 2.5; /* más espacio para la descripción */
+  text-align: left;
+}
+
+.status {
+  flex: 1;
   font-weight: bold;
+}
+
+.active {
+  color: green;
   transition: all 0.2s ease;
 }
 
 .active:hover {
   color: white;
-  background-color: rgb(0, 0, 0);
+  background-color: orangered;
   padding: 5px 8px;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.cancelled span {
+.cancelled {
   color: red;
-  font-weight: bold;
 }

@@ -67,6 +67,7 @@ function AppointmentForm() {
       description: appointment.description,
       userId,
     };
+
     axios
       .post(POSTAPPOINTMENT_URL, newAppointment)
       .then(({ data }) => {
@@ -75,7 +76,8 @@ function AppointmentForm() {
         navigate("/appointments");
       })
       .catch((error) => {
-        alert(`Error: ${error.response.data.error}`);
+        console.error(error.response?.data || error.message);
+        alert(`Error: ${error.response?.data?.error || error.message}`);
       });
   };
 

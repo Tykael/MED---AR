@@ -13,7 +13,7 @@ server.use(express.json());
 server.use(indexRouter);
 
 server.get("/", (req: Request, res: Response) => {
-  console.log(req);
+  console.log("Peticion de raiz recibida");
   res.send("Hola mundo!!!");
 });
 

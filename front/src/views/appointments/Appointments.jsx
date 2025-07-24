@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import myAppointments from "../../helpers/myAppoinments";
-import AppointmentCard from "../../components/appointmentCard/appointmentCard";
+import AppointmentCard from "../../components/appointmentCard/AppointmentCard";
 import styles from "./Appointments.module.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";

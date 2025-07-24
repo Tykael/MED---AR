@@ -20,7 +20,7 @@ export const getAppointmentByIdService = async (turnId: number): Promise<Appoint
 export const scheduleAppointmentService = async (
   scheduleAppointmentDto: IScheduleAppointmentDto
 ): Promise<Appointment> => {
-  const { date, time, userId } = scheduleAppointmentDto;
+  const { date, time, userId, description } = scheduleAppointmentDto;
   //*Verificamos que exista el usuario:
   const user: User | null = await userRepository.findOneBy({
     id: userId,
@@ -30,6 +30,7 @@ export const scheduleAppointmentService = async (
   const newAppointment: Appointment = appointmentRepository.create({
     date,
     time,
+    description,
   });
   //*Asociamos el usuario al turno creado:
   newAppointment.user = user;

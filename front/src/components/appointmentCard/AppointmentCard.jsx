@@ -15,14 +15,14 @@ function AppointmentCard({ id, date, time, status, description, handleAppointmen
   return (
     <div className={styles.container}>
       <span className={styles.date}>{formattedDate}</span>
-      <span>{time}</span>
-      <span>{description}</span>
+      <span className={styles.time}>{time}</span>
+      <span className={styles.description}>{description}</span>
       {status === "active" ? (
-        <span className={styles.active} onClick={handleClick}>
+        <span className={`${styles.status} ${styles.active}`} onClick={handleClick}>
           {status}
         </span>
       ) : (
-        <span className={styles.cancelled}>{status}</span>
+        <span className={`${styles.status} ${styles.cancelled}`}>{status}</span>
       )}
     </div>
   );

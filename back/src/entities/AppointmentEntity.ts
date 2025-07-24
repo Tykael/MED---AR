@@ -13,6 +13,9 @@ class Appointment {
   @Column()
   time!: string;
 
+  @Column()
+  description!: string;
+
   @Column({
     default: AppoitmentStatus.ACTIVE,
   })

@@ -19,14 +19,26 @@ export const getAllAppointments = async (req: Request, res: Response): Promise<v
 
 //* GET /appointments/:id => Obtener el detalle de un turno especifico.
 export const getAppointmentById = async (
-  req: Request<{ turnId: string }, {}, {}>,
+  req: Request<{ id: string }, {}, {}>,
   res: Response
 ): Promise<void> => {
-  const { turnId } = req.params;
+  const { id } = req.params;
+  console.log("Entrando a getAppointmentById, id:", id);
+  const idNumber = Number(id);
+  console.log("Id convertido a número:", idNumber);
+
+  if (isNaN(idNumber)) {
+    console.log("Error: id no es número válido");
+    res.status(400).json({ error: "ID debe ser un número válido" });
+    return;
+  }
+
   try {
-    const appointment = await getAppointmentByIdService(Number(turnId));
+    const appointment = await getAppointmentByIdService(idNumber);
+    console.log("Turno encontrado:", appointment);
     res.status(200).json(appointment);
   } catch (error: any) {
+    console.log("Error al buscar turno:", error.message);
     res.status(404).json({ error: error.message });
   }
 };
