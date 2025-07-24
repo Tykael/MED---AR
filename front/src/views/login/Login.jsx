@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Login.module.css";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const POSTUSERLOGIN_URL = "http://localhost:3000/users/login";
 
@@ -34,7 +34,7 @@ function Login() {
     axios
       .post(POSTUSERLOGIN_URL, user)
       .then(({ data }) => {
-        localStorage.setItem("user", JSON.stringify(data.user));
+        localStorage.setItem("user", JSON.stringify({ user: data.user }));
         alert("Usuario logueado...");
         setUser(initialState);
         navigate("/home");
@@ -75,6 +75,10 @@ function Login() {
           >
             Ingresar
           </button>
+          <h2>¿Aun no estas registrado?</h2>
+          <Link to="/register">
+            <button>REGISTRARSE</button>
+          </Link>
         </form>
       </div>
     </div>

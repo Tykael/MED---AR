@@ -19,6 +19,6 @@ appointmentRouter.get("/:id", getAppointmentById);
 appointmentRouter.post("/schedule", validateAppointment, schedule);
 
 //* PUT /appointments/cancel
-appointmentRouter.put("/cancel", cancel);
+appointmentRouter.put("/cancel/:turnId", cancel);
 
 export default appointmentRouter;

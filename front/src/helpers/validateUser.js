@@ -80,14 +80,14 @@ const validateUser = ({
 
 export default validateUser;
 
-console.log(
-  validateUser({
-    name: "Baat",
-    birthdate: "1990-10-14",
-    email: "poroto@email.com",
-    nDni: 40987654,
-    username: "Porotin",
-    userPassword: "Porotito2@",
-    confirmPassword: "Porotito2@",
-  })
-);
+// console.log(
+//   validateUser({
+//     name: "Baat",
+//     birthdate: "1990-10-14",
+//     email: "poroto@email.com",
+//     nDni: 40987654,
+//     username: "Porotin",
+//     userPassword: "Porotito2@",
+//     confirmPassword: "Porotito2@",
+//   })
+// );

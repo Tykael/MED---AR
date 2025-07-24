@@ -3,6 +3,7 @@ import styles from "./Register.module.css";
 import validateUser from "../../helpers/validateUser";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const POSTUSER_URL = "http://localhost:3000/users/register";
 
@@ -89,6 +90,10 @@ function Register() {
           <button type="submit" disabled={Object.values(user).some((e) => !e)}>
             Registrar
           </button>
+          <h2>¿Ya tenes cuenta?</h2>
+          <Link to="/login">
+            <button>Inicia Sesion</button>
+          </Link>
         </form>
       </div>
     </div>

@@ -1,13 +1,15 @@
-import styles from "../appointmentCard/AppointmentCard.module.css";
+import styles from "./AppointmentCard.module.css";
 
-function AppointmentCard({ id, date, time, status, description }) {
+function AppointmentCard({ id, date, time, status, description, handleAppointmentCancel }) {
   const parseDate = new Date(date);
   const formattedDate = `${parseDate.getDate() + 1} / ${
     parseDate.getMonth() + 1
   } / ${parseDate.getFullYear()}`;
 
   const handleClick = () => {
-    alert(`¿Desea cancelar el turno del dia ${formattedDate} a la hora ${time}?`);
+    if (window.confirm(`¿Desea cancelar el turno del dia ${formattedDate} a la hora ${time}?`)) {
+      handleAppointmentCancel(id);
+    }
   };
 
   return (

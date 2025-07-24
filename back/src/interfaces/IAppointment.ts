@@ -8,7 +8,6 @@ interface IAppointment {
   date: string;
   time: string;
   status: AppoitmentStatus;
-  employee: string;
 }
 
 export default IAppointment;

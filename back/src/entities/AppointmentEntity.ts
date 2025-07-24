@@ -18,9 +18,6 @@ class Appointment {
   })
   status!: AppoitmentStatus;
 
-  @Column()
-  employee!: string;
-
   //* Appointment N:1 User
   @ManyToOne(() => User, (user) => user.appointments)
   @JoinColumn({ name: "user_id" })
