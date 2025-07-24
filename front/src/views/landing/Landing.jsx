@@ -1,10 +1,14 @@
 import styles from "./Landing.module.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/img/medarlogo.png";
 
 function Landing() {
   return (
     <div className={styles.landingContainer}>
       <div className={styles.centralBox}>
+        <div className={styles.logo}>
+          <img src={logo} alt="logo" />
+        </div>
         <div className={styles.register}>
           <h3>¿Es tu primera vez en nuestra App?</h3>
           <Link to="/register">

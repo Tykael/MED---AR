@@ -91,9 +91,11 @@ function Register() {
             Registrar
           </button>
           <h2>¿Ya tenes cuenta?</h2>
-          <Link to="/login">
-            <button>Inicia Sesion</button>
-          </Link>
+          <div className={styles.linkButton}>
+            <Link to="/login">
+              <button>Inicia Sesion</button>
+            </Link>
+          </div>
         </form>
       </div>
     </div>

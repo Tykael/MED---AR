@@ -1,5 +1,5 @@
 .loginContainer {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: #fff5d9;
   background-image: url("../../assets/img/login.png");
@@ -76,4 +76,15 @@ button {
 
 button:hover {
   background-color: #e0ecf3;
+}
+
+.linkButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -0.5rem;
+}
+
+.linkButton button {
+  margin-top: 0;
 }

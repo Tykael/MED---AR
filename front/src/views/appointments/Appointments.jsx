@@ -49,27 +49,28 @@ function Appointments() {
   });
 
   return (
-    <div>
-      <div className={styles.container}>
-        <h1>Mis Turnos:</h1>
-      </div>
+    <div className={styles.container}>
+      <h1 className={styles.heading}>Mis Turnos:</h1>
 
       {appointments.length ? (
-        sortedAppointments.map((appointment, index) => (
-          <AppointmentCard
-            key={index}
-            id={appointment.id}
-            date={appointment.date}
-            time={appointment.time}
-            status={appointment.status}
-            description={appointment.description}
-            handleAppointmentCancel={handleAppointmentCancel}
-          />
-        ))
+        <div className={styles.cardsWrapper}>
+          {sortedAppointments.map((appointment, index) => (
+            <AppointmentCard
+              key={index}
+              id={appointment.id}
+              date={appointment.date}
+              time={appointment.time}
+              status={appointment.status}
+              description={appointment.description}
+              handleAppointmentCancel={handleAppointmentCancel}
+            />
+          ))}
+        </div>
       ) : (
-        <h2>Aun no tienes reservas...</h2>
+        <div className={styles.noAppointments}>
+          <h2>Aún no tienes reservas...</h2>
+        </div>
       )}
-      <div></div>
     </div>
   );
 }

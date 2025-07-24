@@ -76,9 +76,11 @@ function Login() {
             Ingresar
           </button>
           <h2>¿Aun no estas registrado?</h2>
-          <Link to="/register">
-            <button>REGISTRARSE</button>
-          </Link>
+          <div className={styles.linkButton}>
+            <Link to="/register">
+              <button>REGISTRARSE</button>
+            </Link>
+          </div>
         </form>
       </div>
     </div>

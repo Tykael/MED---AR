@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import styles from "../../helpers/localUser";
+import styles from "./AppointmentForm.module.css";
 import { useNavigate } from "react-router-dom";
 import getUserIdFromLocalStorage from "../../helpers/localUser";
 
@@ -100,7 +100,7 @@ function AppointmentForm() {
 
   return (
     <div className={styles.formContainer}>
-      <h2>Nueva Reserva</h2>
+      <h2>Nuevo Turno</h2>
       <hr />
       <form onSubmit={handleSubmit}>
         <div>
@@ -126,7 +126,7 @@ function AppointmentForm() {
               </option>
             ))}
           </select>
-          <select id="minutes" name="minutes" value={appointment.hours} onChange={handleChange}>
+          <select id="minutes" name="minutes" value={appointment.minutes} onChange={handleChange}>
             {validMinutes.map((minute) => (
               <option key={minute} value={minute}>
                 {minute}

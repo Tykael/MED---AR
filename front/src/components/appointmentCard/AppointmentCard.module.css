@@ -1,27 +1,43 @@
 .container {
-  background-color: #213c4e;
-  color: #fff5d9;
-  border-radius: 5px;
+  border-radius: 8px;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  text-align: center;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 10px;
-  span {
-    flex: 0 0 25%;
-  }
+  gap: 10px;
 }
 
-.active {
+.container span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  flex: 1; /* distribuye equitativamente */
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.date {
+  flex: 1.5; /* un poco más de espacio para la fecha */
+}
+
+.active span {
   color: green;
-  &:hover {
-    color: white;
-    background-color: orangered;
-    cursor: pointer;
-  }
+  font-weight: bold;
+  transition: all 0.2s ease;
 }
 
-.cancelled {
+.active:hover {
+  color: white;
+  background-color: rgb(0, 0, 0);
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancelled span {
   color: red;
+  font-weight: bold;
 }

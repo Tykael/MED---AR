@@ -14,7 +14,7 @@ function AppointmentCard({ id, date, time, status, description, handleAppointmen
 
   return (
     <div className={styles.container}>
-      <span>{formattedDate}</span>
+      <span className={styles.date}>{formattedDate}</span>
       <span>{time}</span>
       <span>{description}</span>
       {status === "active" ? (

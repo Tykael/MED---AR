@@ -1,37 +1,40 @@
 .registerContainer {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background-color: #fff5d9;
   background-image: url("../../assets/img/register.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem; /* Añadido para evitar overflow en pantallas pequeñas */
+  box-sizing: border-box;
 }
 
 .registerBox {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   border-radius: 20px;
-  padding: 3rem 4rem;
+  padding: 2.5rem 3rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  max-width: 600px;
-  width: 90%;
+  max-width: 500px;
+  width: 100%;
   font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
   text-align: center;
   font-family: "Nunito", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 300;
   color: #1f5674;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 form {
@@ -49,6 +52,7 @@ label {
   margin-bottom: 0.3rem;
   color: #333;
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
 input {
@@ -56,6 +60,13 @@ input {
   border: none;
   border-radius: 8px;
   font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: background-color 0.3s ease;
+}
+
+input:focus {
+  background-color: #ffffff;
+  outline: none;
 }
 
 span {
@@ -64,7 +75,6 @@ span {
 }
 
 button {
-  margin-top: 0.5rem;
   padding: 0.7rem 1.2rem;
   font-size: 1rem;
   border: none;
@@ -73,8 +83,20 @@ button {
   color: #1f5674;
   cursor: pointer;
   transition: background 0.3s ease;
+  font-weight: 600;
 }
 
 button:hover {
   background-color: #e0ecf3;
+}
+
+.linkButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -0.5rem;
+}
+
+.linkButton button {
+  margin-top: 0;
 }
