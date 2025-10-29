@@ -144,9 +144,9 @@ npm run test
 
 ## 👥 Autor
 
-**Desarrollado por [Tykael Arris](https://github.com/Tykael)**
+**Desarrollado por [Sebastian Arriagada](https://github.com/Tykael)**
 💻 Enfocado en Backend con NestJS y PostgreSQL
-📧 Contacto: [tykael.dev@gmail.com](mailto:tykael.dev@gmail.com)
+📧 Contacto: [kamisama656@gmail.com](mailto:kamisama656@gmail.com)
 
 ---
 
